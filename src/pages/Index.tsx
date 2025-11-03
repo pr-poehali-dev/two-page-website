@@ -27,21 +27,21 @@ interface Product {
 const products: Product[] = [
   {
     id: 1,
-    name: 'Торт Шоколадный Восторг',
+    name: 'MURSE KTREAS',
     price: 2500,
     image: 'https://cdn.poehali.dev/files/6b17a54b-b7b7-4c72-8925-3ba4a054cdaf.jpg',
     category: 'traditional'
   },
   {
     id: 2,
-    name: 'Набор Капкейков',
+    name: 'RESAS VITRAE',
     price: 1200,
     image: 'https://cdn.poehali.dev/files/6b17a54b-b7b7-4c72-8925-3ba4a054cdaf.jpg',
     category: 'cupcakes'
   },
   {
     id: 3,
-    name: 'Праздничный Торт',
+    name: 'LEROSE MIYAS',
     price: 3500,
     image: 'https://cdn.poehali.dev/files/6b17a54b-b7b7-4c72-8925-3ba4a054cdaf.jpg',
     category: 'birthday'
@@ -109,37 +109,29 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <header className="border-b border-border bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4">
-          <nav className="flex items-center justify-between py-4">
-            <div className="flex items-center gap-2">
-              <Icon name="ChefHat" size={32} className="text-primary" />
-              <div>
-                <h1 className="text-3xl font-bold text-primary">BestCakes</h1>
-                <p className="text-xs text-muted-foreground">Частная кондитерская</p>
-              </div>
+    <div className="min-h-screen bg-[#E8D5C4]">
+      <header className="bg-white shadow-sm">
+        <div className="container mx-auto px-6 py-6">
+          <nav className="flex items-center justify-between">
+            <div className="flex items-center gap-8">
+              <a href="#home" className="text-foreground hover:text-primary transition-colors font-medium">Home</a>
+              <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">About Us</a>
+              <a href="#gallery" className="text-foreground hover:text-primary transition-colors font-medium">Our Gallery</a>
+              <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">Services</a>
+              <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact us</a>
             </div>
-            
-            <div className="hidden md:flex items-center gap-6">
-              <a href="#home" className="text-foreground hover:text-primary transition-colors">Главная</a>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors">О нас</a>
-              <a href="#gallery" className="text-foreground hover:text-primary transition-colors">Галерея</a>
-              <a href="#services" className="text-foreground hover:text-primary transition-colors">Услуги</a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors">Контакты</a>
-            </div>
-
             <Button 
               onClick={() => {
                 setSearchParams({ cart: 'open' });
                 setCartOpen(true);
               }} 
               variant="outline" 
+              size="sm"
               className="gap-2"
             >
-              <Icon name="ShoppingCart" size={20} />
+              <Icon name="ShoppingCart" size={16} />
               {cart.length > 0 && (
-                <span className="bg-primary text-primary-foreground rounded-full px-2 py-0.5 text-xs">
+                <span className="bg-primary text-primary-foreground rounded-full px-1.5 py-0.5 text-xs">
                   {cart.length}
                 </span>
               )}
@@ -148,76 +140,120 @@ export default function Index() {
         </div>
       </header>
 
-      <section id="home" className="relative py-20 overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in">
-              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold">
-                История • Предложения • Новости • Свежее • Архив
+      <section className="relative pt-8 pb-16">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            <div className="relative pt-12">
+              <div className="absolute top-0 left-0 flex gap-2">
+                <div className="bg-[#B5787E] text-white px-6 py-3 rounded shadow-md">
+                  <div className="text-sm">history</div>
+                  <div className="text-sm">offers</div>
+                  <div className="text-sm font-semibold">news</div>
+                </div>
+                <div className="bg-[#8B5A4A] text-white px-6 py-3 rounded shadow-md">
+                  <div className="text-sm font-semibold">fresh</div>
+                  <div className="text-sm">archive</div>
+                </div>
               </div>
-              <h2 className="text-6xl md:text-7xl font-bold text-foreground leading-tight">
-                Лучшие торты
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Приготовлены с любовью в нашей частной кондитерской
-              </p>
-              <div className="flex gap-4 pt-4">
-                <Icon name="Twitter" size={24} className="text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-                <Icon name="Facebook" size={24} className="text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-                <Icon name="Instagram" size={24} className="text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-                <Icon name="Youtube" size={24} className="text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+
+              <div className="mt-24 space-y-6">
+                <div className="inline-block">
+                  <Icon name="Cookie" size={48} className="text-[#E8B875]" />
+                </div>
+                
+                <div>
+                  <h1 className="text-7xl font-bold leading-tight mb-2">
+                    <span className="text-[#B5787E]">Best</span>
+                    <span className="text-[#4A3428]">Cakes</span>
+                  </h1>
+                  <p className="text-[#8B5A4A] text-xl italic">Private Bakery Website</p>
+                </div>
+
+                <div className="flex gap-4 pt-4">
+                  {[1, 2, 3, 4].map((_, idx) => (
+                    <div key={idx} className="w-10 h-10 rounded-full border-2 border-[#C4938B] flex items-center justify-center hover:bg-[#C4938B] hover:text-white transition-colors cursor-pointer">
+                      <Icon name={idx === 0 ? "Twitter" : idx === 1 ? "Facebook" : idx === 2 ? "Instagram" : "Youtube"} size={18} />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="relative h-[500px] animate-scale-in">
+
+            <div className="relative">
               <img 
-                src="https://cdn.poehali.dev/files/6b17a54b-b7b7-4c72-8925-3ba4a054cdaf.jpg" 
-                alt="Праздничный торт"
-                className="w-full h-full object-contain drop-shadow-2xl"
+                src="https://cdn.poehali.dev/files/bf194ae5-82dd-4f99-914b-aafcdf8a5b34.jpg" 
+                alt="Best Cakes"
+                className="w-full max-w-xl mx-auto drop-shadow-2xl"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-12">
-        <div className="container mx-auto px-4">
+      <section className="pb-12">
+        <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { title: 'Традиционные Торты', subtitle: 'смотреть фото', icon: 'Cake', color: 'bg-[#C4938B]' },
-              { title: 'Новинка! Капкейки', subtitle: 'смотреть галерею', icon: 'Cookie', color: 'bg-[#8B5A4A]' },
-              { title: 'Праздничные Торты', subtitle: 'смотреть все', icon: 'Gift', color: 'bg-[#E8B875]' }
-            ].map((cat, idx) => (
-              <Card 
-                key={idx}
-                className="p-8 text-center cursor-pointer hover-scale border-none shadow-lg rounded-3xl"
-                style={{ backgroundColor: cat.color }}
-              >
-                <Icon name={cat.icon as any} size={48} className="mx-auto mb-4 text-white" />
-                <h3 className="text-3xl font-bold text-white mb-2">{cat.title}</h3>
-                <p className="text-white/90 italic">{cat.subtitle}</p>
-              </Card>
-            ))}
+            <Card 
+              className="p-12 text-center cursor-pointer hover-scale border-none shadow-lg rounded-3xl bg-[#B5787E]"
+            >
+              <h3 className="text-4xl font-bold text-white mb-3 italic">Traditional</h3>
+              <h3 className="text-4xl font-bold text-white mb-4 italic">Cakes</h3>
+              <p className="text-white/90 text-sm italic mb-2">view photos</p>
+              <div className="w-8 h-8 mx-auto border-2 border-white rounded-full flex items-center justify-center">
+                <Icon name="ArrowRight" size={16} className="text-white" />
+              </div>
+            </Card>
+
+            <Card 
+              className="p-12 text-center cursor-pointer hover-scale border-none shadow-lg rounded-3xl bg-[#B8886F]"
+            >
+              <h3 className="text-4xl font-bold text-white mb-3 italic">New!</h3>
+              <h3 className="text-4xl font-bold text-white mb-4 italic">Cupcakes</h3>
+              <p className="text-white/90 text-sm italic mb-2">view gallery</p>
+              <div className="w-8 h-8 mx-auto border-2 border-white rounded-full flex items-center justify-center">
+                <Icon name="ArrowRight" size={16} className="text-white" />
+              </div>
+            </Card>
+
+            <Card 
+              className="p-12 text-center cursor-pointer hover-scale border-none shadow-lg rounded-3xl bg-[#D9A75F]"
+            >
+              <h3 className="text-4xl font-bold text-white mb-3 italic">Birthday</h3>
+              <h3 className="text-4xl font-bold text-white mb-4 italic">Cakes</h3>
+              <p className="text-white/90 text-sm italic mb-2">view all</p>
+              <div className="w-8 h-8 mx-auto border-2 border-white rounded-full flex items-center justify-center">
+                <Icon name="ArrowRight" size={16} className="text-white" />
+              </div>
+            </Card>
           </div>
         </div>
       </section>
 
-      <section id="gallery" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold text-foreground mb-4">Популярные торты</h2>
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <Icon name="Sparkles" size={20} className="text-[#E8B875]" />
+              <Icon name="Star" size={16} className="text-[#E8B875]" />
+              <Icon name="Sparkles" size={20} className="text-[#E8B875]" />
+            </div>
+            <h2 className="text-5xl font-bold mb-2">
+              <span className="text-[#B5787E]">Popular </span>
+              <span className="text-[#D9A75F]">Cakes</span>
+            </h2>
             <div className="flex items-center justify-center gap-4">
-              <Icon name="Sparkles" size={24} className="text-primary" />
-              <Icon name="Star" size={20} className="text-primary" />
-              <Icon name="Sparkles" size={24} className="text-primary" />
+              <Icon name="Sparkles" size={20} className="text-[#E8B875]" />
+              <Icon name="Star" size={16} className="text-[#E8B875]" />
+              <Icon name="Sparkles" size={20} className="text-[#E8B875]" />
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {products.map((product) => (
-              <Card key={product.id} className="overflow-hidden hover-scale cursor-pointer border-border rounded-3xl shadow-lg">
+              <div key={product.id} className="text-center">
                 <div 
                   onClick={() => navigate(`/product?id=${product.id}`)}
-                  className="aspect-square bg-secondary/30"
+                  className="aspect-square bg-gray-100 rounded-lg overflow-hidden mb-4 cursor-pointer hover-scale"
                 >
                   <img 
                     src={product.image} 
@@ -225,42 +261,54 @@ export default function Index() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">{product.name}</h3>
-                  <p className="text-primary text-xl font-semibold mb-4">{product.price} ₽</p>
-                  <Button 
-                    onClick={() => navigate(`/product?id=${product.id}`)}
-                    className="w-full"
-                  >
-                    Подробнее
-                  </Button>
+                <h3 className="text-xl font-bold text-foreground mb-2 tracking-wide">{product.name}</h3>
+                <p className="text-[#B5787E] italic text-sm mb-1">festigee mauron lortigedena</p>
+                <p className="text-muted-foreground text-sm mb-4">Biscipoast roreni vitareasart, sistily kertya aset aplicandre ertyas nemo erticipations.</p>
+                <div className="flex justify-center">
+                  <div className="w-12 h-12 bg-[#E8B875] rounded-full"></div>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="contact" className="py-16 bg-secondary/20">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-[#F5EBE0]">
+        <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-12">
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">А вы знали?</h3>
-              <div className="space-y-4 text-muted-foreground">
-                <p className="font-semibold">МУТТРАССЕ БЕТАЙСА</p>
-                <p>Consectetur, adipisci velit, sed quia non numquam eius mod tempora incidunt</p>
-                <p className="font-semibold">КСЕРТГАСЕ ВЕРТЯЕРСА</p>
-                <p>Zanuduni, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima venam</p>
-                <Button variant="outline" className="mt-4">Ещё</Button>
+              <h3 className="text-3xl font-bold text-[#B5787E] italic mb-6">Did You Know?</h3>
+              <div className="space-y-6 text-foreground/80">
+                <div>
+                  <p className="font-semibold mb-2 tracking-wide">MYTTRASE BETAYSA</p>
+                  <p className="text-sm">Consectetur, adipisci velit, sed quia non numquam eius mod tempora incidunt</p>
+                </div>
+                <div>
+                  <p className="font-semibold mb-2 tracking-wide">KSERTGASE VERTYAERSA</p>
+                  <p className="text-sm">Zanuduni, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima venam</p>
+                </div>
+                <Button variant="outline" className="bg-[#B5787E] text-white hover:bg-[#9d6670] border-none mt-4">
+                  More
+                </Button>
               </div>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Полезные ссылки</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                {['ST AVERTIAS DERO', 'DEERTO VARALA RANRAY', 'VERITAS NEARY KASTREAS', 'VEROUS FASI LAGIDAE AABUA', 'AVERTEO FEROSE', 'DELERTO VROOLADE', 'MASSER LIARGUS LERTYAUS LALASU', 'NERTAKERY LIAMAS VASE', 'NOERA VERTADEIRAS'].map((link, idx) => (
-                  <li key={idx} className="flex items-center gap-2">
-                    <Icon name="ChevronRight" size={16} className="text-primary" />
+              <h3 className="text-3xl font-bold text-[#D9A75F] italic mb-6">Useful Links</h3>
+              <ul className="space-y-2">
+                {[
+                  'ST AVERTIAS DERO',
+                  'DEERTO VARALA RANRAY',
+                  'VERITAS NEARY KASTREAS',
+                  'VEROUS FASI LAGIDAE AABUA',
+                  'AVERTEO FEROSE',
+                  'DELERTO VROOLADE',
+                  'MASSER LIARGUS LERTYAUS LALASU',
+                  'NERTAKERY LIAMAS VASE',
+                  'NOERA VERTADEIRAS'
+                ].map((link, idx) => (
+                  <li key={idx} className="flex items-center gap-2 text-sm text-foreground/70">
+                    <Icon name="ChevronRight" size={14} className="text-[#D9A75F]" />
                     {link}
                   </li>
                 ))}
@@ -268,26 +316,26 @@ export default function Index() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Быстрое сообщение</h3>
-              <form className="space-y-4">
-                <Input placeholder="Ваше имя" className="bg-white" />
-                <Textarea placeholder="Сообщение" className="bg-white min-h-[120px]" />
-                <Button className="w-full">Отправить</Button>
+              <h3 className="text-3xl font-bold text-[#8B5A4A] italic mb-6">Quick Message</h3>
+              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                <Input placeholder="Your Name" className="bg-white border-[#C4938B]" />
+                <Textarea placeholder="Message" className="bg-white border-[#C4938B] min-h-[140px]" />
+                <Button className="w-full bg-[#B5787E] hover:bg-[#9d6670] text-white">
+                  Send
+                </Button>
               </form>
             </div>
           </div>
         </div>
       </section>
 
-      <footer className="py-6 border-t border-border bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground text-sm">
-              Best Cakes © 2013 • Политика конфиденциальности
-            </p>
-            <div className="flex items-center gap-2 text-muted-foreground text-sm">
-              <Icon name="MapPin" size={16} />
-              <span>ул. Джексон Бульвар 1020, Чикаго, Иллинойс 60604-2340</span>
+      <footer className="py-4 bg-white border-t border-[#E8D5C4]">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-muted-foreground">
+            <p>Best Cakes © 2013 • Privacy policy</p>
+            <div className="flex items-center gap-2">
+              <Icon name="Home" size={14} className="text-[#B5787E]" />
+              <span>28 Jackson Blvd Ste 1020 Chicago, IL 60604-2340</span>
             </div>
           </div>
         </div>
