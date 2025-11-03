@@ -27,21 +27,21 @@ interface Product {
 const products: Product[] = [
   {
     id: 1,
-    name: 'MURSE KTREAS',
+    name: 'Шоколадный Торт',
     price: 2500,
     image: 'https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/7c79b923-a64e-4e4b-8f10-a0338a48ef41.jpg',
     category: 'traditional'
   },
   {
     id: 2,
-    name: 'RESAS VITRAE',
+    name: 'Чизкейк с Апельсином',
     price: 1200,
     image: 'https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/a5cbc111-6495-4bfb-ade8-732b62d2aea3.jpg',
     category: 'cupcakes'
   },
   {
     id: 3,
-    name: 'LEROSE MIYAS',
+    name: 'Торт с Малиной',
     price: 3500,
     image: 'https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/d1568a98-3b6a-4ba4-bef5-beefd6ed5181.jpg',
     category: 'birthday'
@@ -143,30 +143,17 @@ export default function Index() {
       <section className="relative pt-8 pb-16">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
-            <div className="relative pt-12">
-              <div className="absolute top-0 left-0 flex gap-2">
-                <div className="bg-[#B5787E] text-white px-6 py-3 rounded shadow-md">
-                  <div className="text-sm">история</div>
-                  <div className="text-sm">предложения</div>
-                  <div className="text-sm font-semibold">новости</div>
-                </div>
-                <div className="bg-[#8B5A4A] text-white px-6 py-3 rounded shadow-md">
-                  <div className="text-sm font-semibold">свежее</div>
-                  <div className="text-sm">архив</div>
-                </div>
-              </div>
-
-              <div className="mt-24 space-y-6">
+            <div className="space-y-6">
                 <div className="inline-block">
                   <Icon name="Cookie" size={48} className="text-[#E8B875]" />
                 </div>
                 
                 <div>
                   <h1 className="text-7xl font-bold leading-tight mb-2">
-                    <span className="text-[#B5787E]">Лучшие</span>
-                    <span className="text-[#4A3428]">Торты</span>
+                    <span className="text-[#B5787E]">Best</span>
+                    <span className="text-[#4A3428]">Cakes</span>
                   </h1>
-                  <p className="text-[#8B5A4A] text-xl italic">Частная кондитерская</p>
+                  <p className="text-[#8B5A4A] text-xl italic">Private Bakery Website</p>
                 </div>
 
                 <div className="flex gap-4 pt-4">
@@ -262,8 +249,8 @@ export default function Index() {
                   />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2 tracking-wide">{product.name}</h3>
-                <p className="text-[#B5787E] italic text-sm mb-1">festigee mauron lortigedena</p>
-                <p className="text-muted-foreground text-sm mb-4">Biscipoast roreni vitareasart, sistily kertya aset aplicandre ertyas nemo erticipations.</p>
+                <p className="text-[#B5787E] italic text-sm mb-1">классический десерт нашей пекарни</p>
+                <p className="text-muted-foreground text-sm mb-4">Приготовлен по традиционному рецепту из натуральных ингредиентов высшего качества. Идеально подходит для любого праздника.</p>
                 <div className="flex justify-center">
                   <div className="w-12 h-12 bg-[#E8B875] rounded-full"></div>
                 </div>
