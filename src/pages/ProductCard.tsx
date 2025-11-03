@@ -22,7 +22,7 @@ const products: Product[] = [
     name: 'Торт Шоколадный Восторг',
     price: 2500,
     description: 'Нежный шоколадный торт с бельгийским шоколадом, воздушным кремом и хрустящими слоями. Идеально подходит для особых случаев.',
-    image: 'https://cdn.poehali.dev/files/6b17a54b-b7b7-4c72-8925-3ba4a054cdaf.jpg',
+    image: 'https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/7c79b923-a64e-4e4b-8f10-a0338a48ef41.jpg',
     category: 'Традиционные торты',
     weight: '1.5 кг',
     ingredients: ['Бельгийский шоколад', 'Сливочный крем', 'Бисквит', 'Какао']
@@ -32,7 +32,7 @@ const products: Product[] = [
     name: 'Набор Капкейков',
     price: 1200,
     description: 'Ассорти из 12 капкейков с различными начинками: ванильные, шоколадные, клубничные. Украшены цветным кремом.',
-    image: 'https://cdn.poehali.dev/files/6b17a54b-b7b7-4c72-8925-3ba4a054cdaf.jpg',
+    image: 'https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/a5cbc111-6495-4bfb-ade8-732b62d2aea3.jpg',
     category: 'Капкейки',
     weight: '12 шт',
     ingredients: ['Ванильный крем', 'Шоколадный крем', 'Клубничная начинка', 'Бисквит']
@@ -42,7 +42,7 @@ const products: Product[] = [
     name: 'Праздничный Торт',
     price: 3500,
     description: 'Трехъярусный торт с фруктовой начинкой, покрытый нежным кремом и украшенный свежими ягодами.',
-    image: 'https://cdn.poehali.dev/files/6b17a54b-b7b7-4c72-8925-3ba4a054cdaf.jpg',
+    image: 'https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/d1568a98-3b6a-4ba4-bef5-beefd6ed5181.jpg',
     category: 'Праздничные торты',
     weight: '2.5 кг',
     ingredients: ['Свежие ягоды', 'Сливочный крем', 'Бисквит', 'Фруктовая начинка']

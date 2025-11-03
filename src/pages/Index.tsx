@@ -29,21 +29,21 @@ const products: Product[] = [
     id: 1,
     name: 'MURSE KTREAS',
     price: 2500,
-    image: 'https://cdn.poehali.dev/files/6b17a54b-b7b7-4c72-8925-3ba4a054cdaf.jpg',
+    image: 'https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/7c79b923-a64e-4e4b-8f10-a0338a48ef41.jpg',
     category: 'traditional'
   },
   {
     id: 2,
     name: 'RESAS VITRAE',
     price: 1200,
-    image: 'https://cdn.poehali.dev/files/6b17a54b-b7b7-4c72-8925-3ba4a054cdaf.jpg',
+    image: 'https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/a5cbc111-6495-4bfb-ade8-732b62d2aea3.jpg',
     category: 'cupcakes'
   },
   {
     id: 3,
     name: 'LEROSE MIYAS',
     price: 3500,
-    image: 'https://cdn.poehali.dev/files/6b17a54b-b7b7-4c72-8925-3ba4a054cdaf.jpg',
+    image: 'https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/d1568a98-3b6a-4ba4-bef5-beefd6ed5181.jpg',
     category: 'birthday'
   }
 ];
@@ -181,7 +181,7 @@ export default function Index() {
 
             <div className="relative">
               <img 
-                src="https://cdn.poehali.dev/files/bf194ae5-82dd-4f99-914b-aafcdf8a5b34.jpg" 
+                src="https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/adc0df11-50e7-40ec-a4f5-a233ffd764df.jpg" 
                 alt="Best Cakes"
                 className="w-full max-w-xl mx-auto drop-shadow-2xl"
               />
