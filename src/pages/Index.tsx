@@ -114,11 +114,11 @@ export default function Index() {
         <div className="container mx-auto px-6 py-6">
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-8">
-              <a href="#home" className="text-foreground hover:text-primary transition-colors font-medium">Home</a>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">About Us</a>
-              <a href="#gallery" className="text-foreground hover:text-primary transition-colors font-medium">Our Gallery</a>
-              <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">Services</a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact us</a>
+              <a href="#home" className="text-foreground hover:text-primary font-medium">Главная</a>
+              <a href="#about" className="text-foreground hover:text-primary font-medium">О нас</a>
+              <a href="#gallery" className="text-foreground hover:text-primary font-medium">Наша галерея</a>
+              <a href="#services" className="text-foreground hover:text-primary font-medium">Услуги</a>
+              <a href="#contact" className="text-foreground hover:text-primary font-medium">Контакты</a>
             </div>
             <Button 
               onClick={() => {
@@ -146,13 +146,13 @@ export default function Index() {
             <div className="relative pt-12">
               <div className="absolute top-0 left-0 flex gap-2">
                 <div className="bg-[#B5787E] text-white px-6 py-3 rounded shadow-md">
-                  <div className="text-sm">history</div>
-                  <div className="text-sm">offers</div>
-                  <div className="text-sm font-semibold">news</div>
+                  <div className="text-sm">история</div>
+                  <div className="text-sm">предложения</div>
+                  <div className="text-sm font-semibold">новости</div>
                 </div>
                 <div className="bg-[#8B5A4A] text-white px-6 py-3 rounded shadow-md">
-                  <div className="text-sm font-semibold">fresh</div>
-                  <div className="text-sm">archive</div>
+                  <div className="text-sm font-semibold">свежее</div>
+                  <div className="text-sm">архив</div>
                 </div>
               </div>
 
@@ -163,10 +163,10 @@ export default function Index() {
                 
                 <div>
                   <h1 className="text-7xl font-bold leading-tight mb-2">
-                    <span className="text-[#B5787E]">Best</span>
-                    <span className="text-[#4A3428]">Cakes</span>
+                    <span className="text-[#B5787E]">Лучшие</span>
+                    <span className="text-[#4A3428]">Торты</span>
                   </h1>
-                  <p className="text-[#8B5A4A] text-xl italic">Private Bakery Website</p>
+                  <p className="text-[#8B5A4A] text-xl italic">Частная кондитерская</p>
                 </div>
 
                 <div className="flex gap-4 pt-4">
@@ -194,33 +194,33 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-6">
             <Card 
-              className="p-12 text-center cursor-pointer hover-scale border-none shadow-lg rounded-3xl bg-[#B5787E]"
+              className="p-12 text-center cursor-pointer border-none shadow-lg rounded-3xl bg-[#B5787E]"
             >
-              <h3 className="text-4xl font-bold text-white mb-3 italic">Traditional</h3>
-              <h3 className="text-4xl font-bold text-white mb-4 italic">Cakes</h3>
-              <p className="text-white/90 text-sm italic mb-2">view photos</p>
+              <h3 className="text-4xl font-bold text-white mb-3 italic">Традиционные</h3>
+              <h3 className="text-4xl font-bold text-white mb-4 italic">Торты</h3>
+              <p className="text-white/90 text-sm italic mb-2">смотреть фото</p>
               <div className="w-8 h-8 mx-auto border-2 border-white rounded-full flex items-center justify-center">
                 <Icon name="ArrowRight" size={16} className="text-white" />
               </div>
             </Card>
 
             <Card 
-              className="p-12 text-center cursor-pointer hover-scale border-none shadow-lg rounded-3xl bg-[#B8886F]"
+              className="p-12 text-center cursor-pointer border-none shadow-lg rounded-3xl bg-[#B8886F]"
             >
-              <h3 className="text-4xl font-bold text-white mb-3 italic">New!</h3>
-              <h3 className="text-4xl font-bold text-white mb-4 italic">Cupcakes</h3>
-              <p className="text-white/90 text-sm italic mb-2">view gallery</p>
+              <h3 className="text-4xl font-bold text-white mb-3 italic">Новинка!</h3>
+              <h3 className="text-4xl font-bold text-white mb-4 italic">Капкейки</h3>
+              <p className="text-white/90 text-sm italic mb-2">смотреть галерею</p>
               <div className="w-8 h-8 mx-auto border-2 border-white rounded-full flex items-center justify-center">
                 <Icon name="ArrowRight" size={16} className="text-white" />
               </div>
             </Card>
 
             <Card 
-              className="p-12 text-center cursor-pointer hover-scale border-none shadow-lg rounded-3xl bg-[#D9A75F]"
+              className="p-12 text-center cursor-pointer border-none shadow-lg rounded-3xl bg-[#D9A75F]"
             >
-              <h3 className="text-4xl font-bold text-white mb-3 italic">Birthday</h3>
-              <h3 className="text-4xl font-bold text-white mb-4 italic">Cakes</h3>
-              <p className="text-white/90 text-sm italic mb-2">view all</p>
+              <h3 className="text-4xl font-bold text-white mb-3 italic">Праздничные</h3>
+              <h3 className="text-4xl font-bold text-white mb-4 italic">Торты</h3>
+              <p className="text-white/90 text-sm italic mb-2">смотреть все</p>
               <div className="w-8 h-8 mx-auto border-2 border-white rounded-full flex items-center justify-center">
                 <Icon name="ArrowRight" size={16} className="text-white" />
               </div>
@@ -238,8 +238,8 @@ export default function Index() {
               <Icon name="Sparkles" size={20} className="text-[#E8B875]" />
             </div>
             <h2 className="text-5xl font-bold mb-2">
-              <span className="text-[#B5787E]">Popular </span>
-              <span className="text-[#D9A75F]">Cakes</span>
+              <span className="text-[#B5787E]">Популярные </span>
+              <span className="text-[#D9A75F]">Торты</span>
             </h2>
             <div className="flex items-center justify-center gap-4">
               <Icon name="Sparkles" size={20} className="text-[#E8B875]" />
@@ -253,7 +253,7 @@ export default function Index() {
               <div key={product.id} className="text-center">
                 <div 
                   onClick={() => navigate(`/product?id=${product.id}`)}
-                  className="aspect-square bg-gray-100 rounded-lg overflow-hidden mb-4 cursor-pointer hover-scale"
+                  className="aspect-square bg-gray-100 rounded-lg overflow-hidden mb-4 cursor-pointer"
                 >
                   <img 
                     src={product.image} 
@@ -277,7 +277,7 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-12">
             <div>
-              <h3 className="text-3xl font-bold text-[#B5787E] italic mb-6">Did You Know?</h3>
+              <h3 className="text-3xl font-bold text-[#B5787E] italic mb-6">А вы знали?</h3>
               <div className="space-y-6 text-foreground/80">
                 <div>
                   <p className="font-semibold mb-2 tracking-wide">MYTTRASE BETAYSA</p>
@@ -288,13 +288,13 @@ export default function Index() {
                   <p className="text-sm">Zanuduni, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima venam</p>
                 </div>
                 <Button variant="outline" className="bg-[#B5787E] text-white hover:bg-[#9d6670] border-none mt-4">
-                  More
+                  Ещё
                 </Button>
               </div>
             </div>
 
             <div>
-              <h3 className="text-3xl font-bold text-[#D9A75F] italic mb-6">Useful Links</h3>
+              <h3 className="text-3xl font-bold text-[#D9A75F] italic mb-6">Полезные ссылки</h3>
               <ul className="space-y-2">
                 {[
                   'ST AVERTIAS DERO',
@@ -316,12 +316,12 @@ export default function Index() {
             </div>
 
             <div>
-              <h3 className="text-3xl font-bold text-[#8B5A4A] italic mb-6">Quick Message</h3>
+              <h3 className="text-3xl font-bold text-[#8B5A4A] italic mb-6">Быстрое сообщение</h3>
               <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                <Input placeholder="Your Name" className="bg-white border-[#C4938B]" />
-                <Textarea placeholder="Message" className="bg-white border-[#C4938B] min-h-[140px]" />
+                <Input placeholder="Ваше имя" className="bg-white border-[#C4938B]" />
+                <Textarea placeholder="Сообщение" className="bg-white border-[#C4938B] min-h-[140px]" />
                 <Button className="w-full bg-[#B5787E] hover:bg-[#9d6670] text-white">
-                  Send
+                  Отправить
                 </Button>
               </form>
             </div>
@@ -332,10 +332,10 @@ export default function Index() {
       <footer className="py-4 bg-white border-t border-[#E8D5C4]">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-muted-foreground">
-            <p>Best Cakes © 2013 • Privacy policy</p>
+            <p>Лучшие Торты © 2013 • Политика конфиденциальности</p>
             <div className="flex items-center gap-2">
               <Icon name="Home" size={14} className="text-[#B5787E]" />
-              <span>28 Jackson Blvd Ste 1020 Chicago, IL 60604-2340</span>
+              <span>ул. Джексон Бульвар 1020, Чикаго, Иллинойс 60604-2340</span>
             </div>
           </div>
         </div>
