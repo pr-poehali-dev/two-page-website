@@ -144,11 +144,10 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div className="space-y-6">
-                <div className="inline-block">
-                  <Icon name="Cookie" size={48} className="text-[#E8B875]" />
-                </div>
-                
                 <div>
+                  <div className="inline-block mb-4">
+                    <Icon name="Cake" size={32} className="text-[#B5787E]" />
+                  </div>
                   <h1 className="text-7xl font-bold leading-tight mb-2">
                     <span className="text-[#B5787E]">Best</span>
                     <span className="text-[#4A3428]">Cakes</span>
@@ -333,7 +332,7 @@ export default function Index() {
           setSearchParams({});
         }
       }}>
-        <SheetContent className="w-full sm:max-w-lg overflow-y-auto">
+        <SheetContent className="w-full sm:max-w-lg overflow-y-auto" forceMount>
           <SheetHeader>
             <SheetTitle className="text-2xl">Корзина</SheetTitle>
             <SheetDescription>
