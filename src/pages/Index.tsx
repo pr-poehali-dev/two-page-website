@@ -89,19 +89,11 @@ export default function Index() {
 
   const handleOrder = () => {
     if (!orderForm.name || !orderForm.phone || !orderForm.address) {
-      toast({
-        title: 'Заполните все поля',
-        description: 'Имя, телефон и адрес обязательны',
-        variant: 'destructive',
-      });
+      alert('Пожалуйста, заполните все поля');
       return;
     }
 
-    toast({
-      title: 'Заказ оформлен!',
-      description: `Спасибо, ${orderForm.name}! Мы свяжемся с вами в ближайшее время.`,
-    });
-
+    alert(`Спасибо, ${orderForm.name}! Ваш заказ принят.`);
     localStorage.removeItem('cart');
     setCart([]);
     setCartOpen(false);
@@ -349,101 +341,80 @@ export default function Index() {
           setSearchParams({});
         }
       }}>
-        <SheetContent className="w-full sm:max-w-lg overflow-y-auto" forceMount>
+        <SheetContent className="w-full sm:max-w-md" forceMount>
           <SheetHeader>
-            <SheetTitle className="text-2xl">Корзина</SheetTitle>
-            <SheetDescription>
-              {cart.length === 0 ? 'Ваша корзина пуста' : `Товаров в корзине: ${cart.length}`}
-            </SheetDescription>
+            <SheetTitle>Корзина</SheetTitle>
           </SheetHeader>
 
-          {cart.length > 0 ? (
-            <div className="space-y-6 mt-6">
-              <div className="space-y-4">
-                {cart.map((item) => (
-                  <Card key={item.id} className="p-4">
-                    <div className="flex gap-4">
-                      <img 
-                        src={item.image} 
-                        alt={item.name}
-                        className="w-20 h-20 object-cover rounded-lg"
-                      />
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-foreground mb-1">{item.name}</h4>
-                        <p className="text-primary font-semibold">{item.price} ₽</p>
-                        <div className="flex items-center gap-2 mt-2">
-                          <Button
-                            variant="outline"
-                            size="icon"
-                            className="h-7 w-7"
+          <div className="mt-6">
+            {cart.length === 0 ? (
+              <p className="text-center py-8">Корзина пуста</p>
+            ) : (
+              <>
+                <div className="space-y-3 mb-6">
+                  {cart.map((item) => (
+                    <div key={item.id} className="border p-3 rounded">
+                      <div className="flex justify-between items-start mb-2">
+                        <h4 className="font-medium">{item.name}</h4>
+                        <button onClick={() => removeFromCart(item.id)} className="text-red-500 text-sm">
+                          Удалить
+                        </button>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <div className="flex items-center gap-2">
+                          <button 
                             onClick={() => updateQuantity(item.id, -1)}
+                            className="border px-2 py-1 rounded"
                           >
-                            <Icon name="Minus" size={14} />
-                          </Button>
-                          <span className="text-sm w-8 text-center">{item.quantity}</span>
-                          <Button
-                            variant="outline"
-                            size="icon"
-                            className="h-7 w-7"
+                            -
+                          </button>
+                          <span>{item.quantity}</span>
+                          <button 
                             onClick={() => updateQuantity(item.id, 1)}
+                            className="border px-2 py-1 rounded"
                           >
-                            <Icon name="Plus" size={14} />
-                          </Button>
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            className="h-7 w-7 ml-auto"
-                            onClick={() => removeFromCart(item.id)}
-                          >
-                            <Icon name="Trash2" size={14} />
-                          </Button>
+                            +
+                          </button>
                         </div>
+                        <span className="font-bold">{item.price * item.quantity} ₽</span>
                       </div>
                     </div>
-                  </Card>
-                ))}
-              </div>
-
-              <div className="border-t pt-4">
-                <div className="flex justify-between text-xl font-bold mb-6">
-                  <span>Итого:</span>
-                  <span className="text-primary">{totalPrice} ₽</span>
+                  ))}
                 </div>
 
-                <div className="space-y-4">
+                <div className="border-t pt-4 mb-4">
+                  <div className="flex justify-between text-lg font-bold mb-4">
+                    <span>Итого:</span>
+                    <span>{totalPrice} ₽</span>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
                   <Input
-                    placeholder="Ваше имя *"
+                    placeholder="Ваше имя"
                     value={orderForm.name}
                     onChange={(e) => setOrderForm({ ...orderForm, name: e.target.value })}
                   />
                   <Input
-                    placeholder="Телефон *"
+                    placeholder="Телефон"
                     value={orderForm.phone}
                     onChange={(e) => setOrderForm({ ...orderForm, phone: e.target.value })}
                   />
                   <Input
-                    placeholder="Адрес доставки *"
+                    placeholder="Адрес"
                     value={orderForm.address}
                     onChange={(e) => setOrderForm({ ...orderForm, address: e.target.value })}
                   />
-                  <Textarea
-                    placeholder="Комментарий к заказу"
-                    value={orderForm.comment}
-                    onChange={(e) => setOrderForm({ ...orderForm, comment: e.target.value })}
-                    className="min-h-[80px]"
-                  />
-                  <Button onClick={handleOrder} className="w-full" size="lg">
+                  <button 
+                    onClick={handleOrder}
+                    className="w-full bg-[#B5787E] text-white py-2 rounded"
+                  >
                     Оформить заказ
-                  </Button>
+                  </button>
                 </div>
-              </div>
-            </div>
-          ) : (
-            <div className="flex flex-col items-center justify-center py-12">
-              <Icon name="ShoppingCart" size={64} className="text-muted-foreground mb-4" />
-              <p className="text-muted-foreground">Добавьте товары в корзину</p>
-            </div>
-          )}
+              </>
+            )}
+          </div>
         </SheetContent>
       </Sheet>
     </div>
