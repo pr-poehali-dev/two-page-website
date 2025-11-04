@@ -29,21 +29,21 @@ const products: Product[] = [
     id: 1,
     name: 'Шоколадный Торт',
     price: 2500,
-    image: 'https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/7c79b923-a64e-4e4b-8f10-a0338a48ef41.jpg',
+    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800',
     category: 'traditional'
   },
   {
     id: 2,
     name: 'Чизкейк с Апельсином',
     price: 1200,
-    image: 'https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/a5cbc111-6495-4bfb-ade8-732b62d2aea3.jpg',
+    image: 'https://images.unsplash.com/photo-1533134486753-c833f0ed4866?w=800',
     category: 'cupcakes'
   },
   {
     id: 3,
     name: 'Торт с Малиной',
     price: 3500,
-    image: 'https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/d1568a98-3b6a-4ba4-bef5-beefd6ed5181.jpg',
+    image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800',
     category: 'birthday'
   }
 ];
@@ -147,9 +147,9 @@ export default function Index() {
                 <div className="mt-8 ml-12">
                   <div className="inline-block mb-4">
                     <img 
-                      src="https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/8a5c464c-f2e5-47c9-84f3-74b2066bd4bb.jpg" 
+                      src="https://images.unsplash.com/photo-1599785209796-786432b228bc?w=200" 
                       alt="Cupcake"
-                      className="w-16 h-16 object-cover"
+                      className="w-16 h-16 object-cover rounded-full"
                     />
                   </div>
                   <h1 className="text-7xl font-bold leading-tight mb-2">
@@ -170,9 +170,9 @@ export default function Index() {
 
             <div className="relative">
               <img 
-                src="https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/adc0df11-50e7-40ec-a4f5-a233ffd764df.jpg" 
+                src="https://images.unsplash.com/photo-1588195538326-c5b1e5b2e5e9?w=1200" 
                 alt="Best Cakes"
-                className="w-full max-w-xl mx-auto drop-shadow-2xl"
+                className="w-full max-w-xl mx-auto drop-shadow-2xl rounded-3xl"
               />
             </div>
           </div>
@@ -336,7 +336,7 @@ export default function Index() {
           setSearchParams({});
         }
       }}>
-        <SheetContent className="w-full sm:max-w-lg overflow-y-auto" forceMount>
+        <SheetContent className="w-full max-w-full overflow-y-auto" forceMount>
           <SheetHeader>
             <SheetTitle className="text-2xl">Корзина</SheetTitle>
             <SheetDescription>
