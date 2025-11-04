@@ -109,77 +109,166 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <header className="bg-blue-600 text-white py-4">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold">Кондитерская BestCakes</h1>
-            <div className="flex gap-2">
-              <button 
+    <div className="min-h-screen bg-[#E8D5C4]">
+      <header className="bg-white shadow-sm">
+        <div className="container mx-auto px-6 py-6">
+          <nav className="flex items-center justify-between">
+            <div className="flex items-center gap-8">
+              <a href="#home" className="text-foreground font-medium">Главная</a>
+              <a href="#about" className="text-foreground font-medium">О нас</a>
+              <a href="#gallery" className="text-foreground font-medium">Наша галерея</a>
+              <a href="#services" className="text-foreground font-medium">Услуги</a>
+              <a href="#contact" className="text-foreground font-medium">Контакты</a>
+            </div>
+            <div className="flex items-center gap-2">
+              <Button 
                 onClick={() => navigate('/profile')} 
-                className="bg-white text-blue-600 px-4 py-2 rounded"
+                variant="ghost" 
+                size="sm"
+                className="gap-2"
               >
+                <Icon name="User" size={16} />
                 Профиль
-              </button>
-              <button 
+              </Button>
+              <Button 
                 onClick={() => {
                   setSearchParams({ cart: 'open' });
                   setCartOpen(true);
                 }} 
-                className="bg-white text-blue-600 px-4 py-2 rounded"
+                variant="outline" 
+                size="sm"
+                className="gap-2"
               >
-                Корзина ({cart.length})
-              </button>
+                <Icon name="ShoppingCart" size={16} />
+                {cart.length > 0 && (
+                  <span className="bg-primary text-primary-foreground rounded-full px-1.5 py-0.5 text-xs">
+                    {cart.length}
+                  </span>
+                )}
+              </Button>
             </div>
-          </div>
+          </nav>
         </div>
       </header>
 
-      <nav className="bg-gray-200 py-3">
-        <div className="container mx-auto px-4">
-          <div className="flex gap-6">
-            <a href="#home" className="text-black">Главная</a>
-            <a href="#about" className="text-black">О нас</a>
-            <a href="#products" className="text-black">Товары</a>
-            <a href="#contact" className="text-black">Контакты</a>
+      <section className="relative pt-8 pb-16">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            <div className="space-y-6">
+                <div className="mt-8 ml-12">
+                  <div className="inline-block mb-4">
+                    <img 
+                      src="https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/8a5c464c-f2e5-47c9-84f3-74b2066bd4bb.jpg" 
+                      alt="Cupcake"
+                      className="w-16 h-16 object-cover"
+                    />
+                  </div>
+                  <h1 className="text-7xl font-bold leading-tight mb-2">
+                    <span className="text-[#B5787E]">Best</span>
+                    <span className="text-[#4A3428]">Cakes</span>
+                  </h1>
+                  <p className="text-[#8B5A4A] text-xl italic">Private Bakery Website</p>
+                </div>
+
+                <div className="flex gap-4 pt-4">
+                  {[1, 2, 3, 4].map((_, idx) => (
+                    <div key={idx} className="w-10 h-10 rounded-full border-2 border-[#C4938B] flex items-center justify-center cursor-pointer">
+                      <Icon name={idx === 0 ? "Twitter" : idx === 1 ? "Facebook" : idx === 2 ? "Instagram" : "Youtube"} size={18} />
+                    </div>
+                  ))}
+                </div>
+            </div>
+
+            <div className="relative">
+              <img 
+                src="https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/adc0df11-50e7-40ec-a4f5-a233ffd764df.jpg" 
+                alt="Best Cakes"
+                className="w-full max-w-xl mx-auto drop-shadow-2xl"
+              />
+            </div>
           </div>
         </div>
-      </nav>
+      </section>
 
-      <section className="bg-yellow-100 py-12">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-4">Добро пожаловать в BestCakes!</h2>
-          <p className="text-xl mb-6">Самые вкусные торты в городе</p>
-          <img 
-            src="https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/adc0df11-50e7-40ec-a4f5-a233ffd764df.jpg" 
-            alt="Торты"
-            className="mx-auto max-w-md border-4 border-black"
-          />
+      <section className="pb-12">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card 
+              className="p-12 text-center cursor-pointer border-none shadow-lg rounded-3xl bg-[#B5787E]"
+            >
+              <h3 className="text-4xl font-bold text-white mb-3 italic">Традиционные</h3>
+              <h3 className="text-4xl font-bold text-white mb-4 italic">Торты</h3>
+              <p className="text-white/90 text-sm italic mb-2">смотреть фото</p>
+              <div className="w-8 h-8 mx-auto border-2 border-white rounded-full flex items-center justify-center">
+                <Icon name="ArrowRight" size={16} className="text-white" />
+              </div>
+            </Card>
+
+            <Card 
+              className="p-12 text-center cursor-pointer border-none shadow-lg rounded-3xl bg-[#B8886F]"
+            >
+              <h3 className="text-4xl font-bold text-white mb-3 italic">Новинка!</h3>
+              <h3 className="text-4xl font-bold text-white mb-4 italic">Капкейки</h3>
+              <p className="text-white/90 text-sm italic mb-2">смотреть галерею</p>
+              <div className="w-8 h-8 mx-auto border-2 border-white rounded-full flex items-center justify-center">
+                <Icon name="ArrowRight" size={16} className="text-white" />
+              </div>
+            </Card>
+
+            <Card 
+              className="p-12 text-center cursor-pointer border-none shadow-lg rounded-3xl bg-[#D9A75F]"
+            >
+              <h3 className="text-4xl font-bold text-white mb-3 italic">Праздничные</h3>
+              <h3 className="text-4xl font-bold text-white mb-4 italic">Торты</h3>
+              <p className="text-white/90 text-sm italic mb-2">смотреть все</p>
+              <div className="w-8 h-8 mx-auto border-2 border-white rounded-full flex items-center justify-center">
+                <Icon name="ArrowRight" size={16} className="text-white" />
+              </div>
+            </Card>
+          </div>
         </div>
       </section>
 
 
 
-      <section className="py-12" id="products">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Наши торты</h2>
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <Icon name="Sparkles" size={20} className="text-[#E8B875]" />
+              <Icon name="Star" size={16} className="text-[#E8B875]" />
+              <Icon name="Sparkles" size={20} className="text-[#E8B875]" />
+            </div>
+            <h2 className="text-5xl font-bold mb-2">
+              <span className="text-[#B5787E]">Популярные </span>
+              <span className="text-[#D9A75F]">Торты</span>
+            </h2>
+            <div className="flex items-center justify-center gap-4">
+              <Icon name="Sparkles" size={20} className="text-[#E8B875]" />
+              <Icon name="Star" size={16} className="text-[#E8B875]" />
+              <Icon name="Sparkles" size={20} className="text-[#E8B875]" />
+            </div>
+          </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {products.map((product) => (
-              <div key={product.id} className="border-2 border-black p-4">
-                <img 
-                  src={product.image} 
-                  alt={product.name}
-                  className="w-full h-48 object-cover mb-3"
-                />
-                <h3 className="text-lg font-bold mb-2">{product.name}</h3>
-                <p className="text-xl font-bold text-red-600 mb-3">{product.price} ₽</p>
-                <button 
+              <div key={product.id} className="text-center">
+                <div 
                   onClick={() => navigate(`/product?id=${product.id}`)}
-                  className="w-full bg-green-500 text-white py-2 rounded font-bold"
+                  className="aspect-square bg-gray-100 rounded-lg overflow-hidden mb-4 cursor-pointer"
                 >
-                  Подробнее
-                </button>
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2 tracking-wide">{product.name}</h3>
+                <p className="text-[#B5787E] italic text-sm mb-1">классический десерт нашей пекарни</p>
+                <p className="text-muted-foreground text-sm mb-4">Приготовлен по традиционному рецепту из натуральных ингредиентов высшего качества. Идеально подходит для любого праздника.</p>
+                <div className="flex justify-center">
+                  <div className="w-12 h-12 bg-[#E8B875] rounded-full"></div>
+                </div>
               </div>
             ))}
           </div>
@@ -242,12 +331,15 @@ export default function Index() {
         </div>
       </section>
 
-      <footer className="bg-gray-800 text-white py-6 mt-12" id="contact">
-        <div className="container mx-auto px-4 text-center">
-          <p className="mb-2">Кондитерская BestCakes</p>
-          <p className="text-sm">Телефон: +7 (999) 123-45-67</p>
-          <p className="text-sm">Адрес: ул. Примерная, д. 123</p>
-          <p className="text-sm mt-2">© 2024 BestCakes</p>
+      <footer className="py-4 bg-white border-t border-[#E8D5C4]">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-muted-foreground">
+            <p>Лучшие Торты © 2013 • Политика конфиденциальности</p>
+            <div className="flex items-center gap-2">
+              <Icon name="Home" size={14} className="text-[#B5787E]" />
+              <span>ул. Джексон Бульвар 1020, Чикаго, Иллинойс 60604-2340</span>
+            </div>
+          </div>
         </div>
       </footer>
 
