@@ -144,9 +144,13 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div className="space-y-6">
-                <div>
+                <div className="mt-8 ml-12">
                   <div className="inline-block mb-4">
-                    <Icon name="Cake" size={32} className="text-[#B5787E]" />
+                    <img 
+                      src="https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/8a5c464c-f2e5-47c9-84f3-74b2066bd4bb.jpg" 
+                      alt="Cupcake"
+                      className="w-16 h-16 object-cover"
+                    />
                   </div>
                   <h1 className="text-7xl font-bold leading-tight mb-2">
                     <span className="text-[#B5787E]">Best</span>
