@@ -120,22 +120,33 @@ export default function Index() {
               <a href="#services" className="text-foreground font-medium">Услуги</a>
               <a href="#contact" className="text-foreground font-medium">Контакты</a>
             </div>
-            <Button 
-              onClick={() => {
-                setSearchParams({ cart: 'open' });
-                setCartOpen(true);
-              }} 
-              variant="outline" 
-              size="sm"
-              className="gap-2"
-            >
-              <Icon name="ShoppingCart" size={16} />
-              {cart.length > 0 && (
-                <span className="bg-primary text-primary-foreground rounded-full px-1.5 py-0.5 text-xs">
-                  {cart.length}
-                </span>
-              )}
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button 
+                onClick={() => navigate('/profile')} 
+                variant="ghost" 
+                size="sm"
+                className="gap-2"
+              >
+                <Icon name="User" size={16} />
+                Профиль
+              </Button>
+              <Button 
+                onClick={() => {
+                  setSearchParams({ cart: 'open' });
+                  setCartOpen(true);
+                }} 
+                variant="outline" 
+                size="sm"
+                className="gap-2"
+              >
+                <Icon name="ShoppingCart" size={16} />
+                {cart.length > 0 && (
+                  <span className="bg-primary text-primary-foreground rounded-full px-1.5 py-0.5 text-xs">
+                    {cart.length}
+                  </span>
+                )}
+              </Button>
+            </div>
           </nav>
         </div>
       </header>
