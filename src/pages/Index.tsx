@@ -114,11 +114,11 @@ export default function Index() {
         <div className="container mx-auto px-6 py-6">
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-8">
-              <a href="#home" className="text-foreground hover:text-primary font-medium">Главная</a>
-              <a href="#about" className="text-foreground hover:text-primary font-medium">О нас</a>
-              <a href="#gallery" className="text-foreground hover:text-primary font-medium">Наша галерея</a>
-              <a href="#services" className="text-foreground hover:text-primary font-medium">Услуги</a>
-              <a href="#contact" className="text-foreground hover:text-primary font-medium">Контакты</a>
+              <a href="#home" className="text-foreground font-medium">Главная</a>
+              <a href="#about" className="text-foreground font-medium">О нас</a>
+              <a href="#gallery" className="text-foreground font-medium">Наша галерея</a>
+              <a href="#services" className="text-foreground font-medium">Услуги</a>
+              <a href="#contact" className="text-foreground font-medium">Контакты</a>
             </div>
             <Button 
               onClick={() => {
@@ -161,7 +161,7 @@ export default function Index() {
 
                 <div className="flex gap-4 pt-4">
                   {[1, 2, 3, 4].map((_, idx) => (
-                    <div key={idx} className="w-10 h-10 rounded-full border-2 border-[#C4938B] flex items-center justify-center hover:bg-[#C4938B] hover:text-white transition-colors cursor-pointer">
+                    <div key={idx} className="w-10 h-10 rounded-full border-2 border-[#C4938B] flex items-center justify-center cursor-pointer">
                       <Icon name={idx === 0 ? "Twitter" : idx === 1 ? "Facebook" : idx === 2 ? "Instagram" : "Youtube"} size={18} />
                     </div>
                   ))}

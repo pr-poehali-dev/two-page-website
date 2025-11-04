@@ -80,7 +80,7 @@ export default function ProductCard() {
       <header className="border-b border-border bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <button onClick={() => navigate('/')} className="flex items-center gap-2 hover:opacity-70 transition-opacity">
+            <button onClick={() => navigate('/')} className="flex items-center gap-2">
               <Icon name="ChefHat" size={32} className="text-primary" />
               <div>
                 <h1 className="text-3xl font-bold text-primary">BestCakes</h1>
