@@ -27,7 +27,7 @@ export default function Profile() {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoginMode, setIsLoginMode] = useState(true);
-  const [loginForm, setLoginForm] = useState({ email: '', password: '' });
+  const [loginForm, setLoginForm] = useState({ login: '', password: '' });
   const [registerForm, setRegisterForm] = useState({ name: '', email: '', password: '', phone: '' });
   const [user, setUser] = useState<User>({ name: '', email: '', phone: '', address: '' });
   const [orders] = useState<Order[]>([
@@ -45,12 +45,12 @@ export default function Profile() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!loginForm.email || !loginForm.password) {
-      alert('Заполните все поля');
+    if (loginForm.login !== 'user1234' || loginForm.password !== '1234') {
+      alert('Неверный логин или пароль');
       return;
     }
     
-    const savedUser = { name: 'Пользователь', email: loginForm.email, phone: '+7 999 999-99-99', address: '' };
+    const savedUser = { name: 'Пользователь', email: 'user@mail.ru', phone: '+7 999 999-99-99', address: '' };
     localStorage.setItem('user', JSON.stringify(savedUser));
     setUser(savedUser);
     setIsLoggedIn(true);
@@ -119,10 +119,10 @@ export default function Profile() {
             {isLoginMode ? (
               <form onSubmit={handleLogin} className="space-y-3">
                 <Input
-                  type="email"
-                  value={loginForm.email}
-                  onChange={(e) => setLoginForm({ ...loginForm, email: e.target.value })}
-                  placeholder="Email"
+                  type="text"
+                  value={loginForm.login}
+                  onChange={(e) => setLoginForm({ ...loginForm, login: e.target.value })}
+                  placeholder="Логин"
                 />
                 <Input
                   type="password"
