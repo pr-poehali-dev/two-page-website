@@ -104,11 +104,41 @@ export default function Index() {
         <div className="container mx-auto px-6 py-6">
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-8">
-              <a href="#home" className="text-foreground font-medium">Главная</a>
-              <a href="#about" className="text-foreground font-medium">О нас</a>
-              <a href="#gallery" className="text-foreground font-medium">Наша галерея</a>
-              <a href="#services" className="text-foreground font-medium">Услуги</a>
-              <a href="#contact" className="text-foreground font-medium">Контакты</a>
+              <a 
+                href="#home" 
+                onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                className="text-foreground font-medium hover:text-[#B5787E] cursor-pointer"
+              >
+                Главная
+              </a>
+              <a 
+                href="#about" 
+                onClick={(e) => { e.preventDefault(); document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' }); }}
+                className="text-foreground font-medium hover:text-[#B5787E] cursor-pointer"
+              >
+                О нас
+              </a>
+              <a 
+                href="#gallery" 
+                onClick={(e) => { e.preventDefault(); document.querySelector('#gallery')?.scrollIntoView({ behavior: 'smooth' }); }}
+                className="text-foreground font-medium hover:text-[#B5787E] cursor-pointer"
+              >
+                Наша галерея
+              </a>
+              <a 
+                href="#services" 
+                onClick={(e) => { e.preventDefault(); document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' }); }}
+                className="text-foreground font-medium hover:text-[#B5787E] cursor-pointer"
+              >
+                Услуги
+              </a>
+              <a 
+                href="#contact" 
+                onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}
+                className="text-foreground font-medium hover:text-[#B5787E] cursor-pointer"
+              >
+                Контакты
+              </a>
             </div>
             <div className="flex items-center gap-2">
               <Button 
@@ -141,7 +171,7 @@ export default function Index() {
         </div>
       </header>
 
-      <section className="relative pt-8 pb-16">
+      <section id="home" className="relative pt-8 pb-16">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div className="space-y-6 pl-4">
@@ -178,7 +208,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="pb-12">
+      <section id="services" className="pb-12">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-6">
             <Card 
@@ -219,7 +249,7 @@ export default function Index() {
 
 
 
-      <section className="py-16 bg-white">
+      <section id="gallery" className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-4 mb-4">
@@ -263,7 +293,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#F5EBE0]">
+      <section id="about" className="py-16 bg-[#F5EBE0]">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-12">
             <div>
@@ -305,7 +335,7 @@ export default function Index() {
               </ul>
             </div>
 
-            <div>
+            <div id="contact">
               <h3 className="text-3xl font-bold text-[#8B5A4A] italic mb-6">Быстрое сообщение</h3>
               <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                 <Input placeholder="Ваше имя" className="bg-white border-[#C4938B]" />
