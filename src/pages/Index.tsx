@@ -89,11 +89,9 @@ export default function Index() {
 
   const handleOrder = () => {
     if (!orderForm.name || !orderForm.phone || !orderForm.address) {
-      alert('Пожалуйста, заполните все поля');
       return;
     }
 
-    alert(`Спасибо, ${orderForm.name}! Ваш заказ принят.`);
     localStorage.removeItem('cart');
     setCart([]);
     setCartOpen(false);

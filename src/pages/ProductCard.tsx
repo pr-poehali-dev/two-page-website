@@ -68,7 +68,6 @@ export default function ProductCard() {
     }
     
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert('Товар добавлен в корзину');
   };
 
   return (
