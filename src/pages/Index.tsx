@@ -144,29 +144,27 @@ export default function Index() {
       <section className="relative pt-8 pb-16">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
-            <div className="space-y-6">
-                <div className="mt-8 ml-12">
-                  <div className="inline-block mb-4">
-                    <img 
-                      src="https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/8a5c464c-f2e5-47c9-84f3-74b2066bd4bb.jpg" 
-                      alt="Cupcake"
-                      className="w-16 h-16 object-cover"
-                    />
-                  </div>
-                  <h1 className="text-7xl font-bold leading-tight mb-2">
-                    <span className="text-[#B5787E]">Best</span>
-                    <span className="text-[#4A3428]">Cakes</span>
-                  </h1>
-                  <p className="text-[#8B5A4A] text-xl italic">Private Bakery Website</p>
-                </div>
+            <div className="space-y-6 pl-4">
+              <div className="inline-block mb-4">
+                <img 
+                  src="https://cdn.poehali.dev/projects/edfd1245-8ae1-40c5-9c45-cf5c6e9df61a/files/8a5c464c-f2e5-47c9-84f3-74b2066bd4bb.jpg" 
+                  alt="Cupcake"
+                  className="w-16 h-16 object-cover"
+                />
+              </div>
+              <h1 className="text-7xl font-bold leading-tight mb-2">
+                <span className="text-[#B5787E]">Best</span>
+                <span className="text-[#4A3428]">Cakes</span>
+              </h1>
+              <p className="text-[#8B5A4A] text-xl italic">Private Bakery Website</p>
 
-                <div className="flex gap-4 pt-4">
-                  {[1, 2, 3, 4].map((_, idx) => (
-                    <div key={idx} className="w-10 h-10 rounded-full border-2 border-[#C4938B] flex items-center justify-center cursor-pointer">
-                      <Icon name={idx === 0 ? "Twitter" : idx === 1 ? "Facebook" : idx === 2 ? "Instagram" : "Youtube"} size={18} />
-                    </div>
-                  ))}
-                </div>
+              <div className="flex gap-3 pt-2">
+                {[1, 2, 3, 4].map((_, idx) => (
+                  <div key={idx} className="w-9 h-9 rounded-full border-2 border-[#C4938B] flex items-center justify-center cursor-pointer bg-white/50">
+                    <Icon name={idx === 0 ? "Twitter" : idx === 1 ? "Facebook" : idx === 2 ? "Instagram" : "Youtube"} size={16} className="text-[#8B5A4A]" />
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="relative">
